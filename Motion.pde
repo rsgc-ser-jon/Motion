@@ -15,8 +15,7 @@ void draw() {
   background(255);
 
   // Move the ball according to it's speed
-  location.x = location.x + velocity.x;
-  location.y = location.y + velocity.y;
+  location.add(velocity);
 
   // Check for bouncing
   if ((location.x > width) || (location.x < 0)) {

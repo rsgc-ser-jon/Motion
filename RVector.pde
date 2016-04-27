@@ -12,4 +12,9 @@ class RVector {
     
   }
   
+  void add(RVector v) {
+    x = x + v.x;
+    y = y + v.y;
+  }
+  
 }
