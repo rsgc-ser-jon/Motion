@@ -31,9 +31,18 @@ class Mover {
   // update position
   void update() {
 
-    // Pick a random acceleration every time the Mover object updates
-    acceleration = RVector.random2D();
+    // Determine the direction vector that points to the mouse from our current location
+    RVector mouse = new RVector(mouseX, mouseY);
+    RVector direction = RVector.sub(mouse, location);
     
+    // Normalize and scale the direction vecgtor
+    direction.normalize();
+    direction.mult(0.25);
+    
+    // Accelerate based on direction vector
+    acceleration = direction;
+    
+    // update position
     velocity.add(acceleration);
     velocity.limit(3);
     location.add(velocity);
