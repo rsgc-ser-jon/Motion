@@ -4,6 +4,9 @@
 // Progression:
 // 1. Motion 101 – location and velocity
 // 2. Motion w/ Acceleration (Constant)
+//    Velocity - rate of change of location
+//    Acceleration – rate of change of velocity
+//    Acceleration affects velocity; velocity in turn affects location.
 // 3. Motion w/ Acceleration (Random)
 // 4. Motion w/ Acceleration (Toward the mouse)
 class Mover {
