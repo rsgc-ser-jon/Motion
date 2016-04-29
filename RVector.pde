@@ -17,4 +17,9 @@ class RVector {
     y = y + v.y;
   }
   
+  void sub(RVector v) {
+    x = x - v.x;
+    y = y - v.y;
+  }
+  
 }
