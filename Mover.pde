@@ -21,7 +21,7 @@ class Mover {
   Mover() {
     
     // Movers appear in centre of window and have zero velocity at first
-    location = new RVector(width/2, height/2);
+    location = new RVector( random(width), random(height) );
     velocity = new RVector(0, 0);  // object at rest when instantiated
   }
   
@@ -37,7 +37,7 @@ class Mover {
     
     // Normalize and scale the direction vecgtor
     direction.normalize();
-    direction.mult(0.25);
+    direction.mult(0.1);
     
     // Accelerate based on direction vector
     acceleration = direction;
