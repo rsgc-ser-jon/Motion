@@ -22,10 +22,16 @@ class RVector {
     y = y - v.y;
   }
   
-  // scale the vector 
+  // scale the vector with multiplication
   void mult(float n) {
     x = x * n;
     y = y * n;
+  }
+  
+  // scale the vector with division
+  void div(float n) {
+    x = x / n;
+    y = y / n;
   }
   
 }
