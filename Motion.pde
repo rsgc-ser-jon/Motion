@@ -1,5 +1,5 @@
-// Create a space in memory for a Mover object
-Mover mover;
+// Create a space in memory for many Mover objects
+Mover movers[] = new Mover[25];
 
 // Runs once
 void setup() {
@@ -9,7 +9,10 @@ void setup() {
   background(255);
 
   // Actually make an instance of a Mover
-  mover = new Mover();
+  for (int i = 0; i < movers.length; i+=1) {
+    movers[i] = new Mover();
+  }
+  
 }
 
 // Runs forever
@@ -19,23 +22,9 @@ void draw() {
   background(255);
 
   // Make the mover move!
-  mover.update();
-  mover.checkEdges();
-  mover.display();
-}
-
-
-// Respond to keypresses
-void keyPressed() {
-
-  if (key == CODED) {
-
-    if (keyCode == UP) {
-      println("up");
-      mover.acceleration.add( new RVector(-0.001, 0.01) );
-    } else if (keyCode == DOWN) {
-      println("down");
-      mover.acceleration.sub( new RVector(-0.001, 0.01) );
-    }
+  for (int i = 0; i < movers.length; i+=1) {
+    movers[i].update();
+    movers[i].checkEdges();
+    movers[i].display();
   }
 }
