@@ -15,14 +15,15 @@ class Mover {
   // They are in-scope (accessible) to all methods below
   RVector location;
   RVector velocity;
+  RVector acceleration;
   
   // Constructor – use this to initialize a Mover instance
   Mover() {
     
-    // Movers appear in a random location and have random velocity
-    location = new RVector(random(width), random(height));
-    velocity = new RVector(random(-2, 2), random(-2, 2));
-    
+    // Movers appear in centre of window and have zero velocity at first
+    location = new RVector(width/2, height/2);
+    velocity = new RVector(0, 0);  // object at rest when instantiated
+    acceleration = new RVector(0, 0);    
   }
   
   // Behaviour
@@ -31,6 +32,7 @@ class Mover {
   // update position
   void update() {
     
+    velocity.add(acceleration);
     location.add(velocity);
     
   }
