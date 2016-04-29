@@ -23,7 +23,7 @@ class Mover {
     // Movers appear in centre of window and have zero velocity at first
     location = new RVector(width/2, height/2);
     velocity = new RVector(0, 0);  // object at rest when instantiated
-    acceleration = new RVector(0, 0);    
+    acceleration = new RVector(-0.001, 0.01);  // mild acceleration  
   }
   
   // Behaviour
