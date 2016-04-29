@@ -60,7 +60,7 @@ class RVector {
   }
   
   // Return a 2D RVector with a max magnitude of 1 pointing in a random direction
-  RVector random2D() {
+  static RVector random2D() {
     
     return new RVector( random(-1, 1), random(-1, 1) );
     
