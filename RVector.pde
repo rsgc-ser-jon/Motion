@@ -44,7 +44,10 @@ class RVector {
     
     float m = mag();  // get magnitude
     
-    div(m);  // normalize this vector instance using the magnitude
+    // Make sure we don't divide by zero
+    if (m != 0) {
+      div(m);  // normalize this vector instance using the magnitude
+    }
     
   }
   
