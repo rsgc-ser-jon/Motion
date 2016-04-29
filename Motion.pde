@@ -21,10 +21,12 @@ void draw() {
   // Use vector subtraction to determine the length of the line
   mouse.sub(centre);
   
-  // Reduce the line length by a factor of 2
-  mouse.div(2);
-  
-  // Place the origin of the canvas in the middle of the window
+  // Draw a rectangle to illustrate the magnitude of the vector
+  float m = mouse.mag();
+  fill(0); // black fill
+  rect(0, 0, m, 10);
+    
+  // Move the origin of the canvas to the middle of the window
   translate(width/2, height/2);
   
   // Draw a line to represent the vector from the origin to the mouse location
