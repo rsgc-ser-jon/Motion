@@ -24,6 +24,9 @@ void draw() {
   // Normalize the vector
   mouse.normalize();
   
+  // Scale the vector - 50x
+  mouse.mult(50);
+  
   // Draw a rectangle to illustrate the magnitude of the vector
   float m = mouse.mag();
   fill(0); // black fill
