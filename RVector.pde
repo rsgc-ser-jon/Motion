@@ -39,4 +39,13 @@ class RVector {
     return sqrt(x*x + y*y);
   }
   
+  // vector normalization – make the vector a unit vector
+  void normalize() {
+    
+    float m = mag();  // get magnitude
+    
+    div(m);  // normalize this vector instance using the magnitude
+    
+  }
+  
 }
