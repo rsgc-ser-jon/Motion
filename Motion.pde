@@ -21,6 +21,9 @@ void draw() {
   // Use vector subtraction to determine the length of the line
   mouse.sub(centre);
   
+  // Reduce the line length by a factor of 2
+  mouse.mult(0.5);
+  
   // Place the origin of the canvas in the middle of the window
   translate(width/2, height/2);
   
