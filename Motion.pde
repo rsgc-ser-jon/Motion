@@ -22,7 +22,7 @@ void draw() {
   mouse.sub(centre);
   
   // Reduce the line length by a factor of 2
-  mouse.mult(0.5);
+  mouse.div(2);
   
   // Place the origin of the canvas in the middle of the window
   translate(width/2, height/2);
