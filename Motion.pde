@@ -32,8 +32,10 @@ void keyPressed() {
 
     if (keyCode == UP) {
       println("up");
+      mover.acceleration.add( new RVector(-0.001, 0.01) );
     } else if (keyCode == DOWN) {
       println("down");
+      mover.acceleration.sub( new RVector(-0.001, 0.01) );
     }
   }
 }
