@@ -17,9 +17,21 @@ class RVector {
     y = y + v.y;
   }
   
+  static RVector add(RVector v1, RVector v2) {
+    
+    return new RVector( v1.x + v2.x, v1.y + v2.y);
+    
+  }
+
   void sub(RVector v) {
     x = x - v.x;
     y = y - v.y;
+  }
+
+  static RVector sub(RVector v1, RVector v2) {
+    
+    return new RVector( v1.x - v2.x, v1.y - v2.y);
+    
   }
   
   // scale the vector with multiplication
@@ -28,12 +40,24 @@ class RVector {
     y = y * n;
   }
   
+  static RVector mult(RVector v1, float n) {
+    
+    return new RVector( v1.x * n, v1.y * n);
+    
+  }
+
   // scale the vector with division
   void div(float n) {
     x = x / n;
     y = y / n;
   }
   
+  static RVector div(RVector v1, float n) {
+    
+    return new RVector( v1.x / n, v1.y / n);
+    
+  }
+
   // vector magnitude – how long is the vector?
   float mag() {
     return (float) Math.sqrt(x*x + y*y);
