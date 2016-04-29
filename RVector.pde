@@ -34,4 +34,9 @@ class RVector {
     y = y / n;
   }
   
+  // vector magnitude – how long is the vector?
+  float mag() {
+    return sqrt(x*x + y*y);
+  }
+  
 }
