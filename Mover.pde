@@ -33,6 +33,7 @@ class Mover {
   void update() {
     
     velocity.add(acceleration);
+    velocity.limit(10);
     location.add(velocity);
     
   }

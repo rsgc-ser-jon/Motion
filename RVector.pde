@@ -53,9 +53,9 @@ class RVector {
   
   // limit the magnitude of this vector
   void limit(float max) {
-    if (_______ > _______) {
-      _________();
-      ____(max);
+    if (mag() > max) {
+      normalize();
+      mult(max);
     }
   }  
 }
