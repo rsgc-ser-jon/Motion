@@ -36,7 +36,7 @@ class RVector {
   
   // vector magnitude – how long is the vector?
   float mag() {
-    return sqrt(x*x + y*y);
+    return (float) Math.sqrt(x*x + y*y);
   }
   
   // vector normalization – make the vector a unit vector
@@ -62,7 +62,9 @@ class RVector {
   // Return a 2D RVector with a max magnitude of 1 pointing in a random direction
   static RVector random2D() {
     
-    return new RVector( random(-1, 1), random(-1, 1) );
+    RVector v = new RVector( (float) Math.random() * 2 - 1, (float) Math.random() * 2 - 1 );
+    
+    return v;
     
   }
   
