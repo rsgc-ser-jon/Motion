@@ -1,4 +1,4 @@
-class RVector {
+ class RVector {
   
   // Data
   float x;
