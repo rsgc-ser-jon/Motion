@@ -1,17 +1,19 @@
 class Brick {
   
   RVector location;
+  RVector velocity;
 
   // constructor
   Brick() {
     
- location = new RVector( random(width), random(height) );
+    location = new RVector(400, 200);
     
   }
   
   // update position
   void update() {
     // Move the ball according to it's speed
+    location.add(velocity);
   }
   
   // show the object
@@ -21,12 +23,8 @@ class Brick {
     fill(175);
   
     // Display the ball at the location (x, y)
-    rect(location.x, location.y, 30, 16);
+    rect(location.x, location.y, 16, 16);
   }
-  
-  // check for edges
-  void checkEdges() {
-    
     
   }
 }
